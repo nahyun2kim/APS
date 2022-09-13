@@ -14,13 +14,13 @@
 
 <p>아래 <그림 1>과 같이 직사각형 모양의 종이가 있다. 이 종이는 가로방향과 세로 방향으로 1㎝마다 점선이 그어져 있다. 가로 점선은 위에서 아래로 1번부터 차례로 번호가 붙어 있고, 세로 점선은 왼쪽에서 오른쪽으로 번호가 붙어 있다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/1e689dae-2d24-463b-8725-fb58ae8cd2ba/-/preview/" style="width: 218px; height: 181px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 218px; height: 181px;"></p>
 
 <p style="text-align: center;"><그림 1></p>
 
 <p>점선을 따라 이 종이를 칼로 자르려고 한다. 가로 점선을 따라 자르는 경우는 종이의 왼쪽 끝에서 오른쪽 끝까지, 세로 점선인 경우는 위쪽 끝에서 아래쪽 끝까지 한 번에 자른다. 예를 들어, <그림 1>의 가로 길이 10㎝이고 세로 길이 8㎝인 종이를 3번 가로 점선, 4번 세로 점선, 그리고 2번 가로 점선을 따라 자르면 <그림 2>와 같이 여러 개의 종이 조각으로 나뉘게 된다. 이때 가장 큰 종이 조각의 넓이는 30㎠이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/cf033b95-91ef-4e71-8f2c-49c653e27622/-/preview/" style="width: 230px; height: 207px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 230px; height: 207px;"></p>
 
 <p style="text-align: center;"><그림 2></p>
 

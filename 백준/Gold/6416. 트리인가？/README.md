@@ -22,7 +22,7 @@
 
 <p>아래의 그림을 보자. 원은 노드, 화살표는 간선을 의미하며, 화살표의 방향이 노드 u에서 노드 v로 향하는 경우 이는 이 간선이 u에서 나가는 간선이며 v로 들어오는 간선이다. 3개의 그림 중 앞의 2개는 트리지만 뒤의 1개는 트리가 아니다.</p>
 
-<p><img alt="" src="https://www.acmicpc.net/upload/images2/tree1.gif"><img alt="" src="https://www.acmicpc.net/upload/images2/tree2.gif" style="background-color:initial; font-size:medium; height:210px; width:204px"><img alt="" src="https://www.acmicpc.net/upload/images2/tree3.gif" style="background-color:initial; font-size:medium; height:194px; width:164px"></p>
+<p><img alt="" src=""><img alt="" src="" style="background-color:initial; font-size:medium; height:210px; width:204px"><img alt="" src="" style="background-color:initial; font-size:medium; height:194px; width:164px"></p>
 
 <p>당신은 간선의 정보들을 받아서 해당 케이스가 트리인지를 판별해야 한다.</p>
 
