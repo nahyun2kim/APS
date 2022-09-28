@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
+// cruskal
 public class Solution {
 	static int N;
 	static double E;
