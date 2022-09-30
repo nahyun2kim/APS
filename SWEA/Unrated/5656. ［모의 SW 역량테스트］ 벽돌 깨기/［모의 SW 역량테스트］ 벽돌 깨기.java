@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -36,6 +35,7 @@ public class Solution {
 		}// test
 	}
 	
+	// 구슬을 떨어뜨릴 열 선택
 	static void perm(int idx, int[][] arr) {
 		if (idx == N) {
 			minAns = Math.min(minAns, cntBrick(arr));
@@ -54,7 +54,7 @@ public class Solution {
 					break;
 				}
 			}
-			if(h == -1) continue;
+			if(h == -1) continue; // 모든 줄이 다 0인경우 넘어가자
 			
 			perm(idx+1, breakBrick(tmp, h, i));
 			
@@ -63,16 +63,17 @@ public class Solution {
 		
 	}
 	
+	// 구슬을 떨어뜨릴 지점이 선택되면 brick을 부수자
 	static int[][] breakBrick(int[][] arr, int si, int sj) {
 		int[][] tmpArr = new int[H][W];
 		for(int i=0; i<H; i++) 
 			tmpArr[i] = arr[i].clone();
 		Stack<int[]> st = new Stack<>();
 		st.add(new int[] {si, sj});
+		// 벽돌을 부술 지점들을 다 stack에 저장하고 stack이 빌 때까지 진행하자
 		while(!st.isEmpty()) {
 			int[] now = st.pop();
 			int range = tmpArr[now[0]][now[1]];
-			
 			tmpArr[now[0]][now[1]] = 0;
 			for(int i=0; i<4; i++) {
 				for(int r=1; r<range; r++) {
@@ -87,13 +88,14 @@ public class Solution {
 		return downBrick(tmpArr);
 	}
 	
+	// 다 부순 벽돌 정리하기 (아래로 내려서)
 	static int[][] downBrick(int[][] arr) {
 		int[][] tmpArr = new int[H][W];
 		for(int i=0; i<H; i++) 
 			tmpArr[i] = arr[i].clone();
 		for(int i=0; i<W; i++) {
 			while(true) {
-				boolean flag = true;
+				boolean flag = true; // 벽돌이 다 정리되었으면 flag = true
 				for(int j=H-1; j>0; j--) {
 					if(tmpArr[j][i] == 0 && tmpArr[j-1][i] > 0) {
 						flag = false;
@@ -108,6 +110,7 @@ public class Solution {
 		return tmpArr;
 	}
 	
+	// 마지막으로 남은 벽돌의 개수를 세어줌
 	static int cntBrick(int[][] arr) {
 		int cnt = 0;
 		for(int i=0; i<H; i++) {
