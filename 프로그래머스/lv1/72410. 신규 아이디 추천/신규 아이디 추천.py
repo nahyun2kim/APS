@@ -8,7 +8,7 @@ def solution(new_id):
     #3. .두개이상 반복 시 .하나로 변경
     new_id = re.sub("\.+",".",new_id)
     #4. 마침표가 처음이나 끝이라면 제거
-    new_id = re.sub("^[.]|[.]$","",new_id)
+    new_id = re.sub("^\.|\.$","",new_id)
     #5. 빈 문자열이라면, 'a'를 대입
     if len(new_id) == 0: new_id = 'a'
     #6. 길이가 16자 이상이라면 15까지, 끝이 .라면 제거
