@@ -1,28 +1,28 @@
 def solution(s):
-    answer = 1000
-    length = len(s)
-    if length == 1:
-        return 1
-    n = length//2
+    # 미리 세팅해둔 최솟값
+    answer = len(s)
+    # 문자열의 길이가 이미 1이라면 바로 return 1
+    if len(s) == 1: return 1
+    # 단위를 전체 길이의 반까지만 보면 됨
+    n = len(s)//2
+
     for a in range(1,n+1):
-        index = list(range(0,len(s)+1,a))
-        tmp = s[:index[1]]
+        flag = s[:a]
+        l = a
         cnt = 1
-        result = ''
-        for i in range(1,len(index)-1):
-            if not tmp == s[index[i]:index[i+1]]:
-                if cnt == 1:
-                    result += tmp
-                else:
-                    result += str(cnt) + tmp
-                tmp = s[index[i]:index[i+1]]
-                cnt = 1
-            else:
+        for i in range(a, len(s), a):
+            if i + a > len(s):
+                break
+            if s[i:i+a] == flag:
                 cnt += 1
-        if cnt == 1:
-            result += tmp
-        else:
-            result += str(cnt) + tmp
-        result += s[index[-1]:]
-        answer = min(answer, len(result))
+            else:
+                if not cnt == 1:
+                    l += len(str(cnt))
+                flag = s[i:i+a]
+                cnt = 1
+                l += a
+        if not cnt == 1:
+            l += len(str(cnt))
+        answer = min(answer, l+len(s)%a)
+
     return answer
