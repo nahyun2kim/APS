@@ -17,7 +17,7 @@ ans = []
 for i in range(x, n+1):
     ans.append(visit_sum[i] - visit_sum[i-x])
 
-ans.sort(key = lambda x : -x)
+ans.sort( key = lambda x : -x )
 
 if ans[0] == 0:
     print('SAD')
@@ -27,5 +27,7 @@ else:
     for a in ans:
         if answer == a:
             day += 1
+        else:
+            break
     print(answer)
     print(day)
