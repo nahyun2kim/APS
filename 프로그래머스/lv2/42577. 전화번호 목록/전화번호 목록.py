@@ -1,4 +1,5 @@
 def solution(phone_book):
+    phone_book.sort(key = lambda x : len(x))
     check = {}
     for p in phone_book:
         for i in range(len(p)):
