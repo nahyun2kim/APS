@@ -9,10 +9,6 @@ drink = list(map(int, input().split()))
 drink.sort()
 
 answer = drink[-1]
-for i in range(n-1):
-    answer += drink[i] / 2
+answer += sum(drink[:n-1]) / 2
 
-if answer * 10 % 10 == 0:
-    print(int(answer))
-else:
-    print(round(answer, 5))
+print(answer)
