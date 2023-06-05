@@ -11,6 +11,4 @@ def solution(s):
             if not left:
                 return False
             left.pop()
-    if left:
-        return False
-    return True
+    return len(left) == 0
