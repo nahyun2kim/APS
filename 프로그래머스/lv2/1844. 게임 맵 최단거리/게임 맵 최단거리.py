@@ -18,4 +18,5 @@ def solution(maps):
             if 0 <= nx < n and 0 <= ny < m and maps[nx][ny] and not visit[nx][ny]:
                 visit[nx][ny] = 1
                 q.append((nx, ny, cnt + 1))
+                
     return answer
