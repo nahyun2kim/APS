@@ -5,4 +5,3 @@ def solution(brown, yellow):
         c = i
         if r*c - brown == yellow:
             return [r, c]
-    return []
