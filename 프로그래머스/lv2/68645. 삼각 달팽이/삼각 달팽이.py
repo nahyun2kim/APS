@@ -16,7 +16,4 @@ def solution(n):
             x = x + delta[d][0]
             y = y + delta[d][1]
         idx += 1
-    answer = []
-    for t in t:
-        answer += t
-    return answer
+    return sum(t, [])
