@@ -1,2 +1,2 @@
-# APS
-This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).
+# APS (Algorithms Problem Solving)
+Python, Java, MySQL
