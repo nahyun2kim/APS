@@ -1,18 +1,27 @@
 import sys
 input = sys.stdin.readline
 
-N, K = map(int, input().split())
-bags = [list(map(int, input().split())) for _ in range(N)]
+# 물품의 수 n, 버틸수 있는 무게 k
+n, k = map(int, input().split(' '))
 
-item = {0: 0}
-for i in range(N):
-    new_item = bags[i]
-    item_list = item.copy()
-    for j in item_list.keys():
-        if j + new_item[0] <= K:
-            if j + new_item[0] in item_list.keys() and item_list[j+new_item[0]] >= item_list[j] + new_item[1]:
-                continue
-            else:
-                item[j+new_item[0]] = item_list[j] + new_item[1]
+items = []
+for _ in range(n):
 
-print(max(item.values()))
+  # 각 물건의 무게 w, 가치 v
+  w, v = map(int, input().split(' '))
+  items.append((w, v))
+
+dp = [[0 for _ in range(k + 1)] for _ in range(n + 1)]
+
+for i in range(1, n + 1):
+  weight, value = items[i-1]
+  for j in range(1, k + 1):
+
+    # 가방에 넣을 수 없다면
+    if weight > j:
+      dp[i][j] = dp[i-1][j]
+
+    else:
+      dp[i][j] = max(dp[i-1][j - weight] + value, dp[i-1][j])
+
+print(dp[n][k])
